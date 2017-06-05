@@ -60,6 +60,36 @@ namespace MyFirstDemo  // 命名空间
 
             // 创建2.0分支
             // 创建jin2.0分支
+
+            // C#中没有boolean这种数据类型,
+            // double型的2.3赋值给int型变量i，double型精度高，无法自动转换为int类型
+            Console.WriteLine((double)3);
+            Console.WriteLine((int)3.6);  
+            Console.WriteLine((double)3.6);  // 这里转换是多余的！
+            // 命名规范--B项int my age错误在变量名中包含了空格 C项 int static错误在用关键字作变量名 D项 int 3th错误在用数字作为变量名开头 
+
+            // C#的算术运算符（一） 加减乘除
+            double salary = 6000.00;//基本工资
+            double prize = 3200.00;//奖金
+            double tax = 4500.00;//交税
+            Console.Write("我的工资奖金总额是{0}元", salary + prize);
+            Console.WriteLine("我的税后收入是{0}元", salary + prize - tax);
+            // C#的算术运算符（二） 取余运算符。
+            int year = 2015;//年份
+            Console.WriteLine(year % 4);//求年份除以4的余数
+            // C#的算术运算符（三） ++ --
+            int x1 = 5;
+            int y = 5;
+            int z = 5;
+            x1++;
+            Console.Write(x1);
+            Console.Write(y++);
+            Console.Write(z++);
+            Console.WriteLine(++z);  // 输出结果为6557
+            // C#的比较运算符                         
+            double a = 3.5;
+            int b = 3;
+            Console.WriteLine((int)a >= b);  // 结果是True
         }
     }
 }
