@@ -47,6 +47,16 @@ namespace MyFirstDemo  // 命名空间
             int age = 19;//年龄，int类型
             double height = 1.72;//身高，double类型
             Console.WriteLine("我叫{0}，是{1}生，今年{2}岁，身高{3}米。", name, sex, age, height);
+
+            //C#的类型转换
+            double d = 2.5;
+            int x = (int)(d + 1);
+            Console.WriteLine(x);
+            // C#标识符的命名规则
+            int _num1 = 5;//第一个加数
+            int _num2 = 7;//第二个加数
+            int sum = _num1 + _num2;//求和
+            Console.WriteLine("和是{0}", sum);//打印结果
         }
     }
 }
