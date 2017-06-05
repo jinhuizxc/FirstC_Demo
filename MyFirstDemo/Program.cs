@@ -15,7 +15,7 @@ namespace MyFirstDemo  // 命名空间
             // C#的常量
             const string CITY = "布宜诺斯艾利斯";//常量，城市
             const string NAME = "列奥波尔多·福图纳托·加尔铁里·卡斯特利";//常量，姓名
-            Console.WriteLine(CITY + "出生在"+ NAME + "的一个工人家庭");//使用常量
+            Console.WriteLine(CITY + "出生在" + NAME + "的一个工人家庭");//使用常量
             // C#的变量
             string hobby;//声明变量保存爱好
             hobby = "剑道";//给爱好变量赋值
@@ -64,7 +64,7 @@ namespace MyFirstDemo  // 命名空间
             // C#中没有boolean这种数据类型,
             // double型的2.3赋值给int型变量i，double型精度高，无法自动转换为int类型
             Console.WriteLine((double)3);
-            Console.WriteLine((int)3.6);  
+            Console.WriteLine((int)3.6);
             Console.WriteLine((double)3.6);  // 这里转换是多余的！
             // 命名规范--B项int my age错误在变量名中包含了空格 C项 int static错误在用关键字作变量名 D项 int 3th错误在用数字作为变量名开头 
 
@@ -90,6 +90,43 @@ namespace MyFirstDemo  // 命名空间
             double a = 3.5;
             int b = 3;
             Console.WriteLine((int)a >= b);  // 结果是True
+
+            // C#的逻辑运算符（一）
+            Console.WriteLine(true || false);//输出True
+            Console.WriteLine(true && false);//输出False
+            Console.WriteLine(!false);//输出True
+
+            // C#的逻辑运算符（二）
+            int age1 = 4;//年龄
+            if (age1 < 6  || age1 > 60)
+                Console.WriteLine("请坐爱心座！");
+            else
+                Console.WriteLine("请坚持一下！");
+
+            int s = 1;
+            int t = 3;
+            Console.WriteLine(!(s > t));  // 没有！s这样的写法
+
+            // C#的赋值运算符
+            double x2, y2;
+            x2 = y2 = 2;//从右向左赋值，x、y的值都是2
+            x2 /= 0.5;
+            y2 -= 2;
+            Console.WriteLine(x2 - y2);
+
+            // C#的运算符优先级
+            int q = 1;
+            Console.WriteLine(++q * q);   // 输出是4（因为++q即q = q + 1，为2，2*2 = 4,这一点要特别注意！
+            bool w = ++q * q > 3; // w = True
+            bool e = w;//请赋值
+           
+            Console.WriteLine(w == e);
+            // 条件结构
+            double xx = 13.9, yy = 24.4;
+            double sum1 = xx + yy;
+            double avg = sum1 / 2;
+            Console.WriteLine(avg);
+
         }
     }
 }
