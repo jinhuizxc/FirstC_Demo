@@ -98,7 +98,7 @@ namespace MyFirstDemo  // 命名空间
 
             // C#的逻辑运算符（二）
             int age1 = 4;//年龄
-            if (age1 < 6  || age1 > 60)
+            if (age1 < 6 || age1 > 60)
                 Console.WriteLine("请坐爱心座！");
             else
                 Console.WriteLine("请坚持一下！");
@@ -119,14 +119,140 @@ namespace MyFirstDemo  // 命名空间
             Console.WriteLine(++q * q);   // 输出是4（因为++q即q = q + 1，为2，2*2 = 4,这一点要特别注意！
             bool w = ++q * q > 3; // w = True
             bool e = w;//请赋值
-           
+
             Console.WriteLine(w == e);
             // 条件结构
             double xx = 13.9, yy = 24.4;
             double sum1 = xx + yy;
             double avg = sum1 / 2;
             Console.WriteLine(avg);
+            // C#中判断和分支
+            int score = 96;//分数
+            if (score > 95)//判断
+            {//分支1
+                Console.WriteLine("奖励一辆自行车");
+            }
+            // C#中if...else条件结构
+            int age2 = 17;//年龄
+            if (age2 >= 18)//条件，bool类型
+            {//分支1
+                Console.WriteLine("你是成年人");
+            }
+            else
+            {//分支2
+                Console.WriteLine("你是小盆友");
+            }
+            double price = 4388;//手机的售价
+            double salary1 = 4978.67;//本月实发工资
+            if (salary1 >= price)
+            {
 
+                Console.WriteLine("可以买到手机");
+            }
+            else
+            {
+                Console.WriteLine("屌丝,加油吧! ! !");
+            }
+            // C#中嵌套的if结构
+            char sexq = '男';//性别
+            int ageq = 21;//年龄
+            if (sexq != '男')//请填写条件
+            {
+                if (ageq >= 20)
+                {
+                    Console.WriteLine("达到法定婚龄啦");
+                }
+                else
+                {
+                    Console.WriteLine("没有达到哟");
+                }
+            }
+            else
+            {
+                if (ageq >= 22)
+                {
+                    Console.WriteLine("达到法定婚龄!");
+                }
+                else
+                {
+                    Console.WriteLine("没有达到!");
+                }
+            }
+            // C#中多重if结构
+            string job = "科员";
+            if (job == "局长")
+            {
+                Console.WriteLine("发双黄月饼");
+            }
+            else if (job == "处长")
+            {
+                Console.WriteLine("发蛋黄月饼");
+            }
+            else if (job == "科长")
+            {
+                Console.WriteLine("发枣泥月饼");
+            }
+            else
+            {
+                Console.WriteLine("发五仁月饼");
+            }
+            // C#中else与if的匹配
+            int m = 5;
+            int n = 6;
+            if (m >= n)
+            {
+                if (m >= 5)
+                    Console.WriteLine("5");
+            }
+            else
+            {
+                if (n >= 6)
+                    Console.WriteLine("6");
+                else
+                    Console.WriteLine("7");
+            }
+
+            double money = 60000.00;//存款金额
+            //请在这里补充多重条件判断
+            if (money >= 100000)
+            {
+                Console.WriteLine("送一台微波炉");
+            }
+            else if (money >= 50000 && money < 100000)
+            {
+                Console.WriteLine("送一套茶具");
+            }
+            else if (money >= 10000 && money < 50000)
+            {
+                Console.WriteLine("送一袋大米");
+            }
+            else if (money < 10000)
+            {
+                Console.WriteLine("没有礼品");
+            }
+            // C#的条件运算符
+            int yearz = 2015;//年份
+            //请填写代码
+            string text;
+            text = yearz % 4 == 0 ? "闰年" : "平年";
+            Console.WriteLine("今年是{0}", text);
+            // C#的switch结构
+            string job1 = "处长";//职务
+            switch (job1)
+            {
+                case "局长": Console.WriteLine("发双黄月饼"); break;
+                case "处长": Console.WriteLine("发蛋黄月饼"); break;
+                case "科长": Console.WriteLine("发枣泥月饼"); break;
+                default: Console.WriteLine("发五仁月饼"); break;
+            }
+            // C#中，可以用 while 循环结构来实现
+            int yx = 5;
+            while (yx >= 1)//请输入
+            {
+                Console.Write(yx + " ");
+                yx--;//请输入
+
+            }
         }
     }
 }
